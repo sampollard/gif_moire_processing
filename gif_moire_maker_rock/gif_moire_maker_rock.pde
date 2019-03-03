@@ -32,7 +32,7 @@ boolean doSave = false; // variable needed for saving
 float sinOverlay = 0; // put here to initialise variable
 void setup() {
   width= 600;
-  size(width, 3*width/2);//P2D is needed for blur filter
+  surface.setSize(width, 3*width/2);//P2D is needed for blur filter
   shiftDown = height/12;
   imageMode(CENTER);
   // smooth(4); //this doesnt seem to do much as I am using pixels
@@ -161,4 +161,3 @@ PImage[] layerMaker(int nFrames, int nSlits, PImage[] toSplit) {
   both[1] = top;
   return both;
 }
-
